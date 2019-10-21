@@ -10,3 +10,5 @@
 4. demo目的在于学习schema加载方式，使用中间件，目前只测试了singleUpload方法。
 
 5. 测试工具 Altair Graphql Client，使用方式请自行查询官方文档。
+
+![use altair](/doc/use_altair.png)
