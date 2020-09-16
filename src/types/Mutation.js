@@ -19,15 +19,15 @@ exports.MutationType = new GraphQLObjectType({
       },
       resolve: async (parent, { file }, { storeUpload }) => {
         console.log('file', file)
-        let f = await Promise.all(file)
-
-        f[0].createReadStream().pipe(fs.createWriteStream(path.join(__dirname, '../../images/', f[0].filename)))
+        const f = await Promise.all(file)
+        const filePath = path.join(__dirname, '../../images/', f[0].filename)
+        f[0].createReadStream().pipe(fs.createWriteStream(filePath))
         // File upload property ‘stream’ is deprecated. Use ‘createReadStream()’ instead.
         // f[0].stream.pipe(fs.createWriteStream(__dirname+'/'+f[0].filename)) // 不建议
         console.log('ok')
         return {
           id: '1',
-          path: __dirname + '/' + f[0].filename,
+          path: filePath,
           filename: f[0].filename,
           mimetype: f[0].mimetype
         }

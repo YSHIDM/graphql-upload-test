@@ -1,8 +1,8 @@
-import Koa from "koa";
-import { ApolloServer } from "apollo-server-koa";
-// import { resolvers } from "./types2/resolvers";
-// import { typeDefs } from "./types2/typeDefs";
-const { schema } = require('./schema')
+const Koa = require('koa');
+const { ApolloServer } = require("apollo-server-koa");
+// const { resolvers } = require("./types2/resolvers");
+// const { typeDefs } = require("./types2/typeDefs");
+const schema = require('./schema')
 
 const app = new Koa();
 
