@@ -1,6 +1,9 @@
 # graphql 上传文件
 
 ## 简介
+
+graphqlUploadKoa 突然不能用了???
+
 1. 该 demo 借鉴了[apollo-server-koa-demo](https://github.com/bluedusk/apollo-server-koa-demo) 和 [apollo-upload-examples](https://github.com/jaydenseric/apollo-upload-examples)，实现了上传文件功能。
 
 2. index.js 使用了 ApolloServer，server 使用了 koa-middleware-apollo
